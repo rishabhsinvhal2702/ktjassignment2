@@ -1,0 +1,1934 @@
+/* 
+few things about website
+have popups on read more
+added button on clicking becomes add and vice-versa
+hovering on veg-nonveg icon produces little effect
+i applied some svg effect on index.html file as i dont want in my homepage file
+some effects on input fields using focus
+use of google fonts
+hamburger menu
+tried to put lot of efforts in media queries
+scale effect on card
+special effects on clicking the button
+selecting the text effects using ::selection
+and much more..............
+*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 1.4rem;
+    padding-top: 0%;
+}
+
+.navigation{
+    white-space: nowrap;
+    background-color: gray;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2.4rem;
+    position: sticky;
+    top: 0;
+    left: 1.4rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-link{
+    display: inline-block;
+    width: 25%;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav-link:hover{
+    border-bottom: 3px solid whitesmoke;
+}
+
+.intro{
+    height: 66rem;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(190, 190, 190, 0.8), rgba(206, 206, 206, 0.8));
+}
+
+.cover{
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+}
+
+.cover-image{
+    height: 65rem;
+    width: 47.5%;
+    margin: 0.1% 1.4%;
+    margin-right: 0.9%;
+}
+
+.cover-page2{
+    display: inline-block;
+    width: 47.5%;
+    height: 65rem;
+    background-image: url(./images/background1-min.jpg);
+    opacity: 0.8;
+    background-size: cover;
+    margin: 0.1% 1.4%;
+    margin-left: 0.9%;
+    position: relative;
+    text-align: center;
+}
+
+.heading-primary{
+    font-size: 10rem;
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(219, 219, 219, 0.8), rgb(206, 206, 206, 0.8));
+    -webkit-background-clip: text;
+    color: transparent;
+    width: 100%;
+    top: 10%;
+    text-align: center;
+}
+
+.heading-secondary{
+    font-size: 5rem;
+    font-weight: 50;
+    color: white;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+.logo{
+    height: 21rem;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo:hover{
+    transform: translateX(-50%) scale(1.1);
+    transition: all 1s;
+}
+
+.heading-tertiary{
+    font-size: 2.6rem;
+    font-weight: 10;
+    color: white;
+    position: absolute;
+    top: 77%;
+    width: 100%;
+    text-align: center;
+}
+
+.link-specilities{
+    font-size: 2rem;
+    color: gray;
+    text-decoration: none;
+    background-color: white;
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 0.6rem black;
+}
+
+.link-specilities:hover{
+    color: white;
+    background-color: gray;
+}
+
+.link-specilities:active{
+    box-shadow: 0 1px 0.3rem rgb(0, 0, 0, 0.8);
+    transition: all 0.3s;
+}
+
+.specialities{
+    opacity: 0.8;
+    position: relative;
+    background-size: cover;
+    height: 130rem;
+    padding-top: 8rem;
+    color: rgb(36, 36, 36);
+    background-image: linear-gradient(to right, rgba(190, 190, 190, 0.8), rgba(206, 206, 206, 0.8));
+}
+
+.specialities-titles{
+    text-align: center;
+}
+
+.special-heading-primary{
+    background-image: linear-gradient(to right, rgba(186, 186, 186), rgba(36, 36, 36));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 7rem;
+    letter-spacing: 0.6rem;
+}
+
+.special-heading-secondary{
+    color: gray;
+    font-size: 2.9rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 2%;
+}
+
+.row1{
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.row2{
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.row3{
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.special-card{
+    width: 27%;
+    height: 47.7rem;
+    background-image: linear-gradient(to right, orange, rgb(206, 134, 0));
+    margin: 1% 1.6666667%;
+    padding: 0.5%;
+    position: relative;
+    color: rgb(43, 41, 41);
+    border-radius: 0.6rem;
+    box-shadow: 0 0.4rem 2rem black;
+}
+
+.special-card:hover{
+    transform: scale(1.06);
+    transition: all 0.3s;
+}
+
+.card1{
+    margin-left: 6.1666666666%;
+}
+
+.card2{
+    background-image: linear-gradient(to right, orangered, rgb(206, 55, 0));
+}
+
+.card3{
+    margin-right: 6.166666666%;
+}
+
+.card4{
+    margin-left: 6.1666666666%;
+    background-image: linear-gradient(to right, orangered, rgb(206, 55, 0));
+}
+
+.card6{
+    margin-right: 6.166666666%;
+    background-image: linear-gradient(to right, orangered, rgb(206, 55, 0));
+}
+
+.special-image{
+    width: 100%;
+    height: 50%;
+    padding-bottom: 1rem;
+}
+
+
+.specialities-heading-tertiary{
+    font-size: 3rem;
+    padding-bottom: 0.6rem;
+    display: inline-block;
+}
+
+.specialities-heading-tertiary:hover{
+    transform: scale(1.06);
+    transition: all 0.4s;
+}
+
+.specialities-heading-tertiary-pizza{
+    font-size: 2.9rem;
+}
+
+.specialities-para{
+    font-size: 1.5rem;
+}
+
+.discount{
+    font-size: 2rem;
+    text-align: left;
+    padding-right: 2.1rem;
+}
+
+.price{
+    font-size: 1.9rem;
+    text-align: left;
+    padding-right: 2.1rem;
+    padding-bottom: 0.6rem;
+
+}
+
+.veg-nonveg{
+    width: 5.5%;
+    height: 5%;
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+}
+
+.span-veg{
+    position: absolute;
+    font-size: 1.6rem;
+    bottom: 2.7%;
+    left: 8%;
+    visibility: hidden;
+    opacity: 0;
+    color: whitesmoke;
+}
+
+.veg-nonveg:hover ~ .span-veg{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.strike{
+    text-decoration: line-through;
+}
+
+.btn{
+    position: absolute;
+    top: 56%;
+    right: 6%;
+}
+
+.check{
+    visibility: hidden;
+}
+
+.label{
+    position: relative;
+    font-size: 2.1rem;
+    background-color: red;
+    color: white;
+    border: 0.3rem solid darkred;
+    padding: 1rem;
+    padding-right: 2rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 2px 0.6rem black;
+}
+
+.label:active{
+    transform: translateY(3px);
+    box-shadow: 0 1px 0.3rem rgb(0, 0, 0, 0.8);
+    transition: all 0.3s;
+}
+
+.add{
+    font-size: 2.1rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.added{
+    position: absolute;
+    font-size: 2.1rem;
+    left: 4.9%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.check:checked ~ .label{
+    border: 0.3rem solid darkgreen;
+    background-color: green;
+    color: white;
+    
+}
+
+.check:checked ~ .label .add{
+    opacity: 0;
+    text-align: center;
+}
+
+.check:checked ~ .label .added{
+    opacity: 1;
+    position: absolute;
+    top: 12%;
+}
+
+.recommendation{
+    opacity: 0.8;
+    background-size: cover;
+    height: 180.6rem;
+    padding-top: 8rem;
+    color: rgb(36, 36, 36);
+    background-image: linear-gradient(to left, rgba(184, 184, 184, 0.8), rgba(212, 212, 212, 0.8));
+}
+
+.search-bar{
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.search{
+    width: 50%;
+    height: 3rem;
+    padding-left: 1rem;
+    background-color: whitesmoke;
+    color: rgb(109, 109, 109);
+    margin-right: 0%;
+}
+
+.search:hover{
+    transform: scale(1.1);
+    transition: all 0.6s;
+}
+
+.r-search-icon{
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    left: 0.4rem;
+    left: 73%;
+    top: 6%;
+    z-index: 2;
+}
+
+.r-card{
+    width: 22%;
+    height: 47.7rem;
+    background-image: linear-gradient(to right, orange, rgb(206, 134, 0));
+    margin: 1% 1%;
+    padding: 0.5%;
+    position: relative;
+    color: rgb(43, 41, 41);
+    border-radius: 0.6rem;
+    box-shadow: 0 0.4rem 2rem black;
+}
+
+.r-card:hover{
+    transform: scale(1.06);
+    transition: all 0.3s;
+}
+
+.r-card1{
+    margin-left: 3%;
+}
+
+.r-card4{
+    margin-right: 3%;
+}
+
+.r-card5{
+    margin-left: 3%;
+}
+
+.r-card8{
+    margin-right: 3%;
+}
+
+.r-card9{
+    margin-left: 3%;
+}
+
+.r-card12{
+    margin-right: 3%;
+}
+
+.r-label{
+    position: relative;
+    font-size: 2.1rem;
+    box-shadow: 0 2px 0.6rem black;
+    background-color: red;
+    color: white;
+    border: 0.3rem solid darkred;
+    padding: 1rem;
+    padding-right: 2rem;
+    border-radius: 0.6rem;
+}
+
+.r-label:active{
+    transform: translateY(3px);
+    box-shadow: 0 1px 0.3rem rgb(0, 0, 0, 0.8);
+    transition: all 0.3s;
+}
+
+.r-add{
+    font-size: 1.8rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.r-added{
+    position: absolute;
+    font-size: 1.8rem;
+    left: 4.9%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.check:checked ~ .r-label{
+    border: 0.3rem solid darkgreen;
+    background-color: green;
+    color: white;
+    
+}
+
+.check:checked ~ .r-label .r-add{
+    opacity: 0;
+    text-align: center;
+}
+
+.check:checked ~ .r-label .r-added{
+    opacity: 1;
+    position: absolute;
+    top: 21%;
+}
+
+.specialities-heading-tertiary-pasta{
+    font-size: 2.9rem;
+}
+
+.odd{
+    background-image: linear-gradient(to right, rgb(255, 69, 0, 0.8), rgb(206, 55, 0, 0.8));
+}
+
+.even{
+    background-image: linear-gradient(to right, rgb(255, 165, 0, 0.8), rgb(206, 134, 0, 0.8));
+}
+
+.read{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    color: rgb(238, 238, 238);
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.read:hover{
+    background-color: white;
+    color: grey;
+}
+
+.recommend-heading-primary{
+    background-image: linear-gradient(to right, rgba(184, 184, 184), rgba(29, 29, 29));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 6rem;
+    letter-spacing: 0.3rem;
+}
+
+.recommend-titles{
+    text-align: center;
+}
+
+.review{
+    height: 87.4rem;
+    background-image: linear-gradient(to right, rgba(184, 184, 184, 0.7), rgba(212, 212, 212, 0.7)), url(./images/restaurant02.jpg);
+    background-size: cover;
+    padding-top: 8rem;
+    position: relative;
+}
+
+.review-titles{
+    text-align: center;
+}
+
+.review-heading-primary{
+    background-image: linear-gradient(to right, rgb(83, 83, 83), rgba(36, 36, 36));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 7rem;
+    letter-spacing: 2rem;
+}
+
+.review-heading-secondary{
+    background-image: linear-gradient(to right, rgb(83, 83, 83), rgba(36, 36, 36));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+.review1{
+    background-color: rgb(245, 245, 245, 0.8);
+    width: 60%;
+    height: 23.6rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) skewX(10deg);
+    margin-top: 6rem;
+}
+
+.review1:hover{
+    background-color: rgb(245, 245, 245, 0.9);
+}
+
+.review1:hover .img-cust1{
+    filter: blur(0.3rem) brightness(70%);
+}
+
+.review1:hover .custm1{
+    visibility: visible;
+}
+
+.review2{
+    background-color: rgb(245, 245, 245, 0.8);
+    width: 60%;
+    height: 23.6rem;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%) skewX(10deg);
+    margin-top: 3rem;
+}
+
+.review2:hover{
+    background-color: rgb(245, 245, 245, 0.9);
+}
+
+.review2:hover .img-cust2{
+    filter: blur(0.3rem) brightness(70%);
+}
+
+.review2:hover .custm2{
+    visibility: visible;
+}
+
+.img{
+    height: 15rem;
+    width: 15rem;
+    clip-path: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    float: left;
+    transform: translateY(-50%) skewX(-10deg);
+}
+
+.review-para{
+    font-family: 'Shadows Into Light', cursive;
+    display: inline-block;
+    position: absolute;
+    left: 27%;
+    top: 50%;
+    transform: translateY(-50%) skewX(-10deg);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    font-size: 2rem;
+}
+.cust{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-cust{
+    width: 120%;
+    height: 100%;
+}
+
+.img-cust2{
+    width: 100%;
+}
+
+.cust{
+    font-size: 2rem;
+    text-align: center;
+    visibility: hidden;
+    color: whitesmoke;
+}
+
+.review-form{
+    height: 87.4rem;
+    background-image: linear-gradient(to left, rgba(184, 184, 184, 0.7), rgba(212, 212, 212, 0.7)), url(./images/restaurant-06.jpg);
+    background-size: cover;
+    padding-top: 8rem;
+    position: relative;
+}
+
+.form-titles{
+    text-align: center;
+}
+
+.form-heading-primary{
+    font-size: 7rem;
+    letter-spacing: 2.5rem;
+    background-image: linear-gradient(to right, rgb(83, 83, 83), rgba(36, 36, 36));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.form-heading-secondary{
+    background-image: linear-gradient(to right, rgb(83, 83, 83), rgba(36, 36, 36));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3.8rem;
+    font-weight: 100;
+}
+
+.form-area{
+    margin-top: 14rem;
+    background-color: rgb(245, 245, 245, 0.8);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 51%;
+    height: 37.6rem;
+    padding: 3rem;
+    padding-left: 9rem;
+    border-radius: 0.6rem;
+}
+
+.input{
+    margin: 1rem;
+}
+
+.span{
+    font-size: 2rem;
+}
+
+.fill-box{
+    width: 50%;
+    height: 10%;
+}
+
+.label-form{
+    font-size: 1.4rem;
+}
+.review-fill-box{
+    width: 70%;
+    height: 30%;
+}
+
+.rate-para{
+    font-size: 2rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.submit-review{
+    font-size: 2rem;
+    text-decoration: none;
+    margin-top: 8rem;
+    position: relative;
+    left: 33%;
+    color: rgb(90, 90, 90);
+    padding: 0.6rem;
+    transition: all 0.3s;
+}
+
+.submit-review:hover{
+    background-color: lightgray;
+}
+
+.back-top{
+    text-decoration: none;
+    padding: 0.6rem;
+    color: white;
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+}
+
+.back-top:hover{
+    background-color: white;
+    color: gray;
+    transition: all 0.3s;
+}
+
+.footer{
+    text-align: center;
+    height: 32.5rem;
+    background-color: lightgray;
+    padding-top: 2rem;
+}
+
+.logo-bottom{
+    height: 9rem;
+    width: 9rem;
+}
+
+.terms{
+    padding-top: 1rem;
+    padding-bottom: 0.1rem;
+    font-size: 1.6rem;
+}
+
+.reserved{
+    font-size: 1.6rem;
+    padding-bottom: 6rem;
+}
+
+.contact-us{
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+}
+
+.social-site{
+    white-space: nowrap;
+}
+
+.social{
+    display: inline-block;
+    width: 8%;
+}
+
+.facebook{
+    height: 6rem;
+    width: 6rem;
+    margin: 1rem;
+    transform: translateY(0.5rem);
+    cursor: pointer;
+}
+
+.twitter{
+    height: 5rem;
+    width: 5rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.instagram{
+    height: 5rem;
+    width: 6.5rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.whatsapp{
+    height: 4.5rem;
+    width: 4.5rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.email-box{
+    transform: translateX(3.6rem);
+    border-radius: 0.3rem;
+    background-color: lightgray;
+    border: 0.3rem solid grey;
+    padding-left: 0.6rem;
+}
+
+.email-box:valid{
+    border: none;
+    outline: 0.3rem solid green;
+}
+
+.email-box:invalid{
+    border: none;
+    outline: 0.3rem solid black;
+}
+
+.name-box{
+    transform: translateX(1rem);
+    border-radius: 0.3rem;
+    background-color: lightgray;
+    border: 0.3rem solid grey;
+    padding-left: 0.6rem;
+}
+
+.name-box:valid{
+    border: none;
+    outline: 0.3rem solid green;
+}
+
+.name-box:invalid{
+    border: none;
+    outline: 0.3rem solid black;
+}
+
+.text-review-box{
+    transform: translateX(3rem);
+    border-radius: 0.3rem;
+    background-color: lightgray;
+    border: 0.3rem solid grey;
+    padding-left: 0.6rem;
+}
+
+.text-review-box::-webkit-input-placeholder{
+    position: absolute;
+    top: 2%;
+}
+
+.text-review-box:valid{
+    border: none;
+    outline: 0.3rem solid green;
+}
+
+.text-review-box:invalid{
+    border: none;
+    outline: 0.3rem solid black;
+}
+
+.specialities-para::selection, .discount::selection, .price::selection, .review-para::selection{
+    background-color: grey;
+    color: whitesmoke;
+}
+
+/* ------popups------ */
+
+.s-popup{
+    height: 100vh;
+    width: 100%;
+    z-index: 6;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.s-popup-content{
+    width: 66%;
+    height: 43.32rem;
+    padding: 1.4rem;
+    background-image: linear-gradient(to bottom, orange, orangered);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.s-popup:target{
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.popup-image{
+    height: 100%;
+    width: 40%;
+    display: inline-block;
+    margin-right: 1.4rem;
+}
+
+.popup-heading-primary{
+    display: inline-block;
+    font-size: 4rem;
+    position: absolute;
+    top: 6%;
+    color: rgb(88, 88, 88);
+}
+
+.popup-para{
+    display: inline-block;
+    font-size: 2rem;
+    position: absolute;
+    top: 18%;
+    color: rgb(29, 29, 29);
+}
+
+.buy-popup{
+    text-decoration: none;
+    padding: 1rem 2.9rem;
+    box-shadow: 0 2px 0.6rem black;
+    color: white;
+    position: absolute;
+    background-color: green;
+    font-size: 2rem;
+    bottom: 4%;
+    right: 29%;
+}
+
+.buy-popup:active{
+    transform: translateY(3px);
+    box-shadow: 0 1px 0.3rem rgb(0, 0, 0, 0.8);
+    transition: all 0.3s;
+}
+
+.cancel-popup{
+    font-size: 2.1rem;
+    text-decoration: none;
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+}
+
+.hamburger{
+    height: 100vh;
+    width: 100%;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hamburger:target{
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.hamburger-content{
+    text-align: center;
+    width: 66%;
+    height: 15rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hamburger-links{
+    font-size: 3rem;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+.hamburger-close{
+    font-size: 3rem;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 6%;
+    right: 6%;
+}
+
+.hamburger-icon{
+    background-color: grey;
+    height: 5rem;
+    width: 5rem;
+    clip-path: circle(50% at 50% 50%);
+    background-color: white;
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.lines{
+    position: absolute;
+    font-size: 1.6rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-decoration: none;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1500px) {
+    .specialities-heading-tertiary{
+        font-size: 2.3rem;
+    }
+
+    .specialities-heading-tertiary-pizza{
+        font-size: 2.1rem;
+    }
+
+    .popup-para{
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .review1{
+        width: 70%;
+    }
+
+    .review2{
+        width: 70%;
+    }
+
+    .s-popup-content{
+        width: 75%;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .specialities-heading-tertiary{
+        font-size: 2rem;
+        padding-bottom: 0.6rem;
+        display: inline-block;
+    }
+    
+    .specialities-heading-tertiary:hover{
+        transform: scale(1.04);
+        transition: all 0.4s;
+    }
+    
+    .specialities-heading-tertiary-pizza{
+        font-size: 1.8rem;
+    }
+    
+    .specialities-para{
+        font-size: 1.3rem;
+    }
+    
+    .discount{
+        font-size: 1.6rem;
+        text-align: left;
+        padding-right: 2.1rem;
+    }
+    
+    .price{
+        font-size: 1.5rem;
+        text-align: left;
+        padding-right: 2.1rem;
+        padding-bottom: 0.6rem;
+    
+    }
+
+    .btn{
+        position: absolute;
+        top: 56%;
+        right: 6%;
+    }
+    
+    .check{
+        visibility: hidden;
+    }
+    
+    .label{
+        position: relative;
+        font-size: 1.6rem;
+        background-color: red;
+        color: white;
+        border: 0.3rem solid darkred;
+        padding: 0.6rem 1rem;
+        padding-right: 1.5rem;
+        border-radius: 0.6rem;
+        box-shadow: 0 2px 0.6rem black;
+    }
+    
+    .add{
+        font-size: 1.6rem;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .added{
+        position: absolute;
+        font-size: 1.6rem;
+        left: 4.9%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .r-label{
+        position: relative;
+        font-size: 1.6rem;
+        box-shadow: 0 2px 0.6rem black;
+        background-color: red;
+        color: white;
+        border: 0.3rem solid darkred;
+        padding: 0.6rem 1rem;
+        padding-right: 1.5rem;
+        border-radius: 0.6rem;
+    }
+    
+    .r-add{
+        font-size: 1.6rem;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .r-added{
+        position: absolute;
+        font-size: 1.6rem;
+        left: 4.9%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .check:checked ~ .r-label .r-added{
+        opacity: 1;
+        position: absolute;
+        top: 12%;
+    }
+    
+    .r-search-icon{
+        height: 2rem;
+        width: 2rem;
+        left: 0.6rem;
+        left: 71%;
+        top: 6%;
+        z-index: 2;
+    }
+
+    .form-area{
+        padding: 3rem;
+        padding-left: 3rem;
+    }
+    
+    .s-popup-content{
+        width: 80%;
+    }
+
+    .popup-para{
+        font-size: 1.6rem;
+    }
+
+    .popup-image{
+        width: 45%;
+    }
+
+    .buy-popup{
+        right: 24%;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .review1{
+        width: 80%;
+    }
+
+    .review2{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    body{
+        padding: 0;
+    }
+
+    .intro{
+        height: 132rem;
+        text-align: center;
+    }
+
+    .cover{
+        display: inline-block;
+    }
+
+    .cover-image{
+        width: 90%;
+    }
+
+    .cover-page2{
+        width: 90%;
+    }
+
+    .review-para{
+        left: 29%;
+    }
+
+    .form-area{
+        width: 70%;
+    }
+
+    .s-popup-content{
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .navigation{
+        padding: 1.5rem;
+        font-size: 1.6rem;
+    }
+
+    .specialities{
+        height: 173.33333333rem;
+    }
+
+    .special-heading-primary{
+        font-size: 5.1rem;
+    }
+
+    .special-heading-secondary{
+        font-size: 2.1rem;
+    }
+
+    .row1{
+        display: inline-block;
+        width: 100%;
+        position: relative;
+    }
+    
+    .row2{
+        display: inline-block;
+        width: 100%;
+        position: relative;
+    }
+    
+    .row3{
+        display: inline-block;
+        width: 100%;
+        position: relative;
+    }
+    
+    .special-card{
+        width: 40%;
+        height: 47.66666666rem;
+        background-image: linear-gradient(to right, orange, rgb(206, 134, 0));
+        margin: 1% 1.6666667%;
+        margin-bottom: 2.1%;
+        padding: 0.5%;
+        position: relative;
+        color: rgb(43, 41, 41);
+        border-radius: 0.6rem;
+        box-shadow: 0 0.4rem 2rem black;
+    }
+    
+    .special-card:hover{
+        transform: scale(1.06);
+        transition: all 0.3s;
+    }
+    
+    .card1{
+        margin-left: 6.1666666666%;
+    }
+    
+    .card2{
+        background-image: linear-gradient(to right, orangered, rgb(206, 55, 0));
+        position: absolute;
+        top: 0%;
+        left: 50%;
+    }
+    
+    .card3{
+        margin-left: 6.166666666%;
+    }
+    
+    .card4{
+        background-image: linear-gradient(to right, orangered, rgb(206, 55, 0));
+        position: absolute;
+        top: -100%;
+        left: 50%;
+    }
+
+    .card5{
+        margin-left: 6.166666666%;
+    }
+    
+    .card6{
+        background-image: linear-gradient(to right, orangered, rgb(206, 55, 0));
+        position: absolute;
+        top: 0;
+        left: 50%;
+    }
+
+    .recommendation{
+        height: 221rem;
+    }
+
+    .recommend-heading-primary{
+        font-size: 4rem;
+    }
+
+    .r-card{
+        width: 29%;
+        position: relative;
+    }
+
+    .r-card2{
+        position: absolute;
+        top: 0%;
+        left: 33.3333333333%;
+    }
+
+    .r-card3{
+        position: absolute;
+        margin-left: 0;
+        top: 0;
+        left: 66.6666666666%;
+    }
+
+    .r-card4{
+        background-image: linear-gradient(to right, orangered, rgb(206, 55, 0));
+        margin-left: 3%;
+    }
+    
+    .r-card5{
+        margin-left: 1%;
+        position: absolute;
+        top: -100%;
+        left: 33.3333333333%;
+    }
+
+    .r-card6{
+        position: absolute;
+        margin-left: 0%;
+        top: -100%;
+        left: 66.66666666666%;
+    }
+
+    .r-card7{
+        margin-left: 3%;
+        position: absolute;
+    }
+    
+    .r-card8{
+        margin-right: 0%;
+        left: 33.3333333333%;
+
+    }
+    
+    .r-card9{
+        background-image: linear-gradient(to right, orange, rgb(206, 134, 0));
+        margin-left: 0;
+        position: absolute;
+        top: -100%;
+        left: 66.6666666666%;
+    }
+
+    .r-card10{
+        margin-left: 3%;
+        position: absolute;
+    }
+
+    .r-card11{
+        position: absolute;
+        left: 33.33333333333%;
+    }
+    
+    .r-card12{
+        margin-left: 0%;
+        margin-right: 3%;
+        left: 66.66666666666%;
+    }
+
+    .search{
+        width: 60%;
+        height: 3rem;
+        padding-left: 1rem;
+        background-color: whitesmoke;
+        color: rgb(109, 109, 109);
+        margin-right: 0%;
+    }
+    
+    .r-search-icon{
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        left: 0.4rem;
+        left: 75%;
+        top: 6%;
+        z-index: 2;
+    }
+
+    .review-para{
+        left: 35%;
+        font-size: 1.6rem;
+    }
+
+    .form-area{
+        width: 80%;
+    }
+
+    .social{
+        display: inline-block;
+        width: 12%;
+    }
+    
+    .s-popup-content{
+        width: 96%;
+    }
+
+    .popup-heading-primary{
+        font-size: 3.5rem;
+    }
+
+    .popup-para{
+        font-size: 1.4rem;
+    }
+
+    .popup-image{
+        width: 50%;
+    }
+
+    .buy-popup{
+        right: 18%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .navigation{
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+    .intro{
+        height: 104.8rem;
+        text-align: center;
+    }
+    
+    .heading-primary{
+        font-size: 7.5rem;
+    }
+
+    .heading-secondary{
+        font-size: 3.75rem;
+    }
+
+    .logo{
+        height: 16rem;
+    }
+
+    .logo:hover{
+        transform: translateX(-50%) scale(1.06);
+        transition: all 1s;
+    }
+
+    .cover-image{
+        height: 50.6rem;
+    }
+
+    .cover-page2{
+        height: 50.6rem;
+    }
+
+    .heading-tertiary{
+        font-size: 2rem;
+    }
+
+    .link-specilities{
+        font-size: 1.5rem;
+        padding: 0.75rem;
+    }
+
+    .specialities{
+        height: 317.8rem;
+    }
+
+    .special-card{
+        width: 60%;
+        height: 47.666666rem;
+        background-image: linear-gradient(to right, orange, rgb(206, 134, 0));
+        margin: 1% 1.6666667%;
+        margin-bottom: 2.1%;
+        padding: 0.5%;
+        position: relative;
+        color: rgb(43, 41, 41);
+        border-radius: 0.6rem;
+        box-shadow: 0 0.4rem 2rem black;
+    }
+    
+    .special-card:hover{
+        transform: scale(1.06);
+        transition: all 0.3s;
+    }
+    
+    .card1{
+        left: 20%;
+    }
+    
+    .card2{
+        background-image: linear-gradient(to right, orangered, rgb(206, 55, 0));
+        top: 100%;
+        left: 20%;
+    }
+    
+    .card3{
+        left: 20%;
+    }
+    
+    .card4{
+        background-image: linear-gradient(to right, orangered, rgb(206, 55, 0));
+        left: 20%;
+    
+    }
+
+    .card5{
+        left: 20%;
+
+    }
+    
+    .card6{
+        background-image: linear-gradient(to right, orangered, rgb(206, 55, 0));
+        left: 20%;
+    }
+
+    .special-heading-primary{
+        font-size: 4.5rem;
+    }
+
+    .special-heading-secondary{
+        font-size: 1.6rem;
+    }
+
+    .recommendation{
+        height: 613.9rem;
+    }
+
+    .r-card{
+        width: 60%;
+        position: relative;
+        left: 20%;
+        margin-left: 0;
+        margin-bottom: 2.1%;
+    }
+
+    .search{
+        width: 80%;
+        height: 3rem;
+        padding-left: 1rem;
+        background-color: whitesmoke;
+        color: rgb(109, 109, 109);
+        margin-right: 0%;
+    }
+    
+    .search:hover{
+        transform: scale(1.1);
+        transition: all 0.6s;
+    }
+    
+    .r-search-icon{
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        left: 0.4rem;
+        left: 85%;
+        top: 6%;
+        z-index: 2;
+    }
+
+    .review-heading-primary{
+        font-size: 6rem;
+    }
+    
+    .review-heading-secondary{
+        font-size: 3rem;
+    }
+
+    .form-heading-primary{
+        font-size: 5.6rem;
+    }
+    
+    .form-heading-secondary{
+        font-size: 2.7rem;
+    }
+
+    .review1{
+        transform: translateX(-50%) skewX(0deg);
+    }
+    
+    .review2{
+        transform: translateX(-50%) skewX(0deg);
+    }
+    
+    .img{
+        transform: translateY(-50%) skewX(0deg);
+    }
+    
+    .review-para{
+        transform: translateY(-50%) skewX(0deg);
+        font-size: 1.4rem;
+        left: 40%;
+    }
+
+    .form-area{
+        width: 85%;
+    }
+    
+    .popup-image{
+        position: relative;
+        height: 80%;
+        width: 40%;
+        top: 10%;
+        left: 0;
+        margin-right: 1rem;
+    }
+    
+    .popup-heading-primary{
+        top: 12%;
+        font-size: 3.2rem;
+    }
+    
+    .popup-para{
+        top: 24%;
+        font-size: 1.4rem;
+    }
+    
+    .buy-popup{
+        padding: 0.5rem 2.9rem;
+        font-size: 1.8rem;
+        bottom: 3.5%;
+    }
+
+    .hamburger-icon{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .special-heading-primary{
+        font-size: 4rem;
+    }
+
+    .special-heading-secondary{
+        font-size: 1.2rem;
+    }
+
+    .special-card{
+        width: 70%;
+        margin-bottom: 2rem;
+    }
+
+    .card1{
+        left: 15%;
+    }
+    
+    .card2{
+        top: 100%;
+        left: 15%;
+    }
+    
+    .card3{
+        left: 15%;
+    }
+    
+    .card4{
+        left: 15%;
+    }
+
+    .card5{
+        left: 15%;
+    }
+    
+    .card6{
+        left: 15%;
+    }
+
+    .recommend-heading-primary{
+        font-size: 3rem;
+    }
+
+    .r-card{
+        width: 70%;
+        position: relative;
+        left: 15%;
+        margin-bottom: 2%;
+    }
+
+    .img{
+        height: 12rem;
+        width: 12rem;;
+    }
+
+    .review1{
+        width: 80%;
+        height: 24%;
+    }
+
+    .review2{
+        width: 80%;
+        height: 24%;
+    }
+    
+    .form-area{
+        width: 93%;
+    }
+
+    .social{
+        display: inline-block;
+        width: 14%;
+    }    
+
+    .s-popup-content{
+        height: 61.37rem;
+        padding: 1.4rem;
+        background-image: linear-gradient(to bottom, orange, orangered);
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .popup-image{
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 30%;
+        width: 60%;
+    }
+    
+    .popup-heading-primary{
+        text-align: center;
+        display: inline;
+        font-size: 2rem;
+        position: absolute;
+        top: 35%;
+        color: rgb(88, 88, 88);
+    }
+    
+    .popup-para{
+        display: inline-block;
+        font-size: 1.6rem;
+        position: absolute;
+        top: 40%;
+        color: rgb(29, 29, 29);
+    }
+    
+    .buy-popup{
+        font-size: 2rem;
+        bottom: 4%;
+        right: 40%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    
+    .special-card{
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    .card1{
+        left: 10%;
+    }
+    
+    .card2{
+        top: 100%;
+        left: 10%;
+    }
+    
+    .card3{
+        left: 10%;
+    }
+    
+    .card4{
+        left: 10%;
+    }
+
+    .card5{
+        left: 10%;
+    }
+    
+    .card6{
+        left: 10%;
+    }
+
+    .r-card{
+        width: 80%;
+        position: relative;
+        left: 10%;
+        margin-bottom: 2%;
+    }
+
+    .review1{
+        width: 90%;
+    }
+
+    .review2{
+        width: 90%;
+    }
+
+    .review-para{
+        font-size: 1.2rem;
+        left: 45%;
+    }
+    
+
+    .form-area{
+        width: 97%;
+        height: 45rem;
+        margin-top: 10rem;
+    }
+
+    .social{
+        display: inline-block;
+        width: 20%;
+    }    
+    
+    .s-popup-content{
+        height: 61.37rem;
+        padding: 1.4rem;
+        background-image: linear-gradient(to bottom, orange, orangered);
+        position: absolute;
+        top: 51%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .popup-image{
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 30%;
+        width: 60%;
+    }
+    
+    .popup-heading-primary{
+        text-align: center;
+        display: inline;
+        font-size: 2rem;
+        position: absolute;
+        top: 35%;
+        color: rgb(88, 88, 88);
+    }
+    
+    .popup-para{
+        display: inline-block;
+        font-size: 1.6rem;
+        position: absolute;
+        top: 40%;
+        color: rgb(29, 29, 29);
+    }
+    
+    .buy-popup{
+        font-size: 2rem;
+        bottom: 4%;
+        right: 40%;
+    }
+
+    .span{
+        font-size: 1.5rem;
+    }
+
+    .rate-para{
+        font-size: 1.2rem;
+    }
+
+    .form-area{
+        height: 37.6rem;
+        padding: 2rem;
+        padding-left: 2rem;
+    }
+
+}
+
+@media screen and (max-width:373px) {
+    
+    body{
+        width: 100vh;
+    }
+
+}
